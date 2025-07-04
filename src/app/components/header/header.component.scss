@@ -1,0 +1,14 @@
+header {
+    z-index: 1;
+    display: flex;
+    background-color: white;
+    min-width: 100%;
+    position: fixed;
+    padding-inline: 15px;
+    padding-block: 15px;
+    span { 
+        font-size: 20px;
+        color: #3A3A3A;
+        font-weight: 600;
+    }
+}

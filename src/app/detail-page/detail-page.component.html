@@ -3,6 +3,6 @@
   <div *ngIf="loading">
     <i class="pi pi-spin pi-spinner" style="font-size: 2rem"></i>
   </div>
-  <iframe [src]="'https://www.gutenberg.org/cache/epub/84/pg84-images.html' | safeUrl" class="w-full min-h-screen border-none" frameborder="0">
+  <iframe [src]="tempLink | safeUrl" class="w-full min-h-screen border-none" frameborder="0">
   </iframe>
 </div>

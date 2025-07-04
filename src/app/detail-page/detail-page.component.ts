@@ -53,7 +53,6 @@ export class DetailPageComponent implements OnInit {
         }
         const bookId = data.results[0].id;
         const url = `https://www.gutenberg.org/cache/epub/${bookId}/pg${bookId}-images.html`
-        // const htmlUrl = data.results[0].formats['text/html'];
         this.tempLink = url;
         this.loading = false;
       })

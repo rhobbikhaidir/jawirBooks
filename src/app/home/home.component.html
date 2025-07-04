@@ -1,7 +1,6 @@
-<div class="pt-10  p-10">
+<div class="p-4">
   <p-toast  position="top-center" /> 
-
-    <div class="border border-[#10b981] shadow-md p-10 bg-white rounded flex flex-col gap-y-6">
+    <div class="border border-[#10b981] shadow-md p-10 bg-white rounded-lg flex flex-col gap-y-6">
         <div>
             <h1 class="text-2xl text-[#10b981]">
                 JawirBooks
@@ -9,10 +8,10 @@
             <h2>Eksplor ribuan buku legendaris dari zaman baheula sampai 1928. Gratis, legal, dan bisa dibaca sambil
                 rebahan!</h2>
         </div>
-        <div class="flex flex-row justify-start items-center gap-2">
+        <div class="flex flex-row justify-start items-center gap-2 self-strech bg-red">
             <p-floatlabel variant="on">
                 <p-iconfield>
-                    <input pInputText id="on_label" [(ngModel)]="searchVal" autocomplete="off" pSize="large" (keyup)="searchBooks($event)"/>
+                    <input pInputText id="on_label" [(ngModel)]="searchVal" autocomplete="off" pSize="small" (keyup)="searchBooks($event)"/>
                     <p-inputicon class="pi pi-search" />
                 </p-iconfield>
                 <label for="on_label">Cari Buku</label>

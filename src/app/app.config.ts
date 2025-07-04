@@ -5,15 +5,15 @@ import { provideClientHydration, withEventReplay } from '@angular/platform-brows
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { routes } from './app.routes';
 
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 import Aura from '@primeng/themes/aura';
 import { providePrimeNG } from 'primeng/config';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideAnimations(),
-    // provideHttpClient(withFetch()),
-    provideHttpClient(),
+    provideHttpClient(withFetch()),
+    // provideHttpClient(),
 
     providePrimeNG({
       theme: {

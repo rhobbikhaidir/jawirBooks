@@ -11,6 +11,6 @@ export const routes: Routes = [
     {
         path: 'detail/:id',
         loadComponent: () => DetailPageComponent,
-        title: "buku"
+        title: "Dive Into Books",
     },
 ];

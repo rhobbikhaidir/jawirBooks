@@ -51,7 +51,7 @@ export class DetailPageComponent implements OnInit {
           this.loading = false;
           this.showError();
         }
-        const htmlUrl = data.results[0].formats['text/html; charset=utf-8'];
+        const htmlUrl = data.results[0].formats['text/html'];
         this.tempLink = htmlUrl
         this.loading = false;
       })

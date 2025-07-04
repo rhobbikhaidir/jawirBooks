@@ -94,7 +94,8 @@ export class HomeComponent implements OnInit {
       search: search
     }).pipe(catchError((err) => {
       this.loading = false;
-      this.showError(err)
+      console.log(err.error, 'ini error nya')
+      this.showError(err) 
       console.log(err);
       throw err
     })).subscribe((data) => {

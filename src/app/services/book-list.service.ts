@@ -10,17 +10,23 @@ export class BookListService {
   http = inject(HttpClient)
 
   getListBooks(payload: PartialListBooks) {
-   return  this.http.get<GutendexResponse>(`https://gutendex.com/books`, {
+   return  this.http.get<GutendexResponse>('https://gutendex.com/books/', {
       params: {
         page: payload.page,
         search: payload.search  ? payload.search : ''
       }
     })
   }
+  getBookById(id: number) {
+    return this.http.get<GutendexResponse>('https://gutendex.com/books/', {
+      params: { ids: id }
+    });
+  }
+  
 
   getDetailBooks(payload: PartialDetail) {
 
-    return  this.http.get<GutendexResponse>(`https://gutendex.com/books`, {
+    return  this.http.get<GutendexResponse>('https://gutendex.com/books/', {
       params: {
         ids: payload.id
       }

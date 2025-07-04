@@ -1,13 +1,8 @@
 <div class="min-h-screen flex flex-col justify-center items-center">
-  <p-toast  position="top-center" (onClose)="onToastClose()" /> 
-  <div  *ngIf="loading">
+  <p-toast position="top-center" (onClose)="onToastClose()" />
+  <div *ngIf="loading">
     <i class="pi pi-spin pi-spinner" style="font-size: 2rem"></i>
   </div>
-  <p-button pRipple (click)="showError()" label="Sticky" />
-
-  <iframe
-    [src]="tempLink | safeUrl"
-    class="w-full min-h-screen border-none"
-    frameborder="0">
+  <iframe *ngIf="!loading" [src]="tempLink | safeUrl" class="w-full min-h-screen border-none" frameborder="0">
   </iframe>
 </div>

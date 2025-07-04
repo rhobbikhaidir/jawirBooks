@@ -2,14 +2,14 @@
     <div class="w-full self-start ">
         <img alt="Card" class="w-full h-[380px]" 
         laz
-        [src]="cardItem().formats['image/jpeg'] ?? 'assets/dummy-books.jpg' "
+        [src]="cardItem().formats['image/jpeg'] ? cardItem().formats['image/jpeg'] : 'assets/dummy-books.jpg' "
          />
     </div>
     <div class=" px-4 flex-1 self-center flex flex-col gap-1 max-h-50 overflow-y-auto">
         <h1 class="text-base sm:text-lg font-semibold cursor-pointer" [pTooltip]="cardItem().title" tooltipPosition="left" placeholder="Left" >
             {{truncateText([cardItem().title], 40)}}
         </h1>
-        <h4 class="text-xs text-[#64748b]">{{cardItem().authors[0]?.name}}</h4>
+        <h4 class="text-xs text-[#64748b]">{{cardItem().authors[0].name ? cardItem().authors[0].name : '-' }}</h4>
         <p class="text-xs   sm:text-sm"   >
             {{truncateText(cardItem().summaries)}}
         </p>
